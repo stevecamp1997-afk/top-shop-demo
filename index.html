@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top Shop | Custom Countertops & Precision Fabrication | Gulfport, MS</title>
+    <title>Top Shop | Architectural Stone & Custom Countertops | Gulfport, MS</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -11,194 +11,209 @@
             theme: {
                 extend: {
                     colors: {
-                        gold: {
-                            400: '#E5C158',
-                            500: '#D4AF37',
-                            600: '#AA8828',
+                        stone: {
+                            50: '#FAF9F6',   /* Warm Alabaster Canvas */
+                            100: '#F2EFE9',  /* Travertine Surface */
+                            200: '#E5E0D8',  /* Subtle Hairline Border */
+                            300: '#D1C9BD',
+                            500: '#78716C',
+                            700: '#44403C',
+                            800: '#292524',
+                            900: '#18181B',  /* Architectural Charcoal */
                         },
-                        charcoal: {
-                            800: '#1E232A',
-                            900: '#12161A',
-                            950: '#0B0D10',
-                        },
-                        slatecustom: '#2A303C'
+                        bronze: {
+                            50: '#FDF8F3',
+                            100: '#F8ECE0',
+                            500: '#A6632B',
+                            600: '#8C4F1E',  /* Primary CTA Accent */
+                            700: '#703D15',
+                        }
                     },
                     fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'],
                     }
                 }
             }
         }
     </script>
-    <!-- Google Fonts & Font Awesome Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #12161A;
-            color: #E2E8F0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAF9F6;
+            color: #18181B;
         }
         .font-serif {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
         }
-        /* Glassmorphism */
-        .glass-panel {
-            background: rgba(30, 35, 42, 0.75);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+        /* Custom Range Slider */
+        input[type=range] {
+            -webkit-appearance: none;
+            background: transparent;
         }
-        .glass-card {
-            background: rgba(42, 48, 60, 0.6);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(212, 175, 55, 0.15);
+        input[type=range]::-webkit-slider-runnable-track {
+            height: 6px;
+            background: #E5E0D8;
+            border-radius: 999px;
         }
-        .gold-gradient-text {
-            background: linear-gradient(135deg, #FFF0B3 0%, #D4AF37 50%, #997A1E 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #8C4F1E;
+            border: 3px solid #FAF9F6;
+            box-shadow: 0 2px 6px rgba(24, 24, 27, 0.25);
+            margin-top: -7px;
+            cursor: pointer;
+            transition: transform 0.15s ease;
         }
-        .gold-border-glow:focus, .gold-border-glow.active {
-            border-color: #D4AF37;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        input[type=range]::-webkit-slider-thumb:hover {
+            transform: scale(1.12);
         }
         /* Custom Scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #12161A;
+            background: #FAF9F6;
         }
         ::-webkit-scrollbar-thumb {
-            background: #2A303C;
+            background: #D1C9BD;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #D4AF37;
-        }
-        /* Range slider styling */
-        input[type=range] {
-            accent-color: #D4AF37;
+            background: #8C4F1E;
         }
     </style>
 </head>
-<body class="antialiased text-slate-200 min-h-screen flex flex-col justify-between selection:bg-gold-500 selection:text-charcoal-900">
+<body class="antialiased selection:bg-bronze-600 selection:text-white">
 
-    <header class="sticky top-0 z-50 glass-panel border-b border-slate-800">
+    <!-- Top Showroom Announcement Bar -->
+    <div class="bg-stone-900 text-stone-200 text-xs py-2.5 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+            <div class="flex items-center gap-2">
+                <span class="inline-block w-1.5 h-1.5 rounded-full bg-bronze-500"></span>
+                <span class="tracking-wide">Now featuring 3D Digital Laser Templating & CNC Precision Fabrication in Gulfport, MS</span>
+            </div>
+            <div class="flex items-center gap-4 text-stone-300">
+                <span>Mon–Fri: 8:00 AM – 4:30 PM</span>
+                <a href="#estimator" class="text-white font-semibold underline decoration-bronze-500 underline-offset-4 hover:text-bronze-100 transition-colors">
+                    Calculate Instant Estimate &rarr;
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Architectural Header -->
+    <header class="sticky top-0 z-40 bg-stone-50/95 backdrop-blur-md border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-            <!-- Brand Logo -->
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center text-charcoal-950 font-black text-xl shadow-lg shadow-gold-500/20 group-hover:scale-105 transition-transform">
+            <!-- Brand Wordmark -->
+            <a href="#" class="flex items-center gap-3.5 group">
+                <div class="w-10 h-10 rounded-lg bg-stone-900 text-stone-50 flex items-center justify-center font-serif font-bold text-xl tracking-tight group-hover:bg-bronze-600 transition-colors">
                     TS
                 </div>
                 <div>
-                    <span class="text-2xl font-serif font-bold tracking-tight text-white block leading-none">TOP SHOP</span>
-                    <span class="text-[10px] tracking-widest text-gold-400 uppercase font-semibold">Gulfport • Modern Luxury</span>
+                    <span class="text-2xl font-serif font-bold tracking-tight text-stone-900 block leading-none">TOP SHOP</span>
+                    <span class="text-[10px] tracking-[0.2em] text-stone-500 uppercase font-semibold mt-0.5 block">Architectural Stone • Gulfport</span>
                 </div>
             </a>
 
-            <!-- Navigation Links -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-                <a href="#estimator" class="hover:text-gold-400 transition-colors flex items-center gap-1.5">
-                    <i class="fa-solid font-xs fa-calculator text-gold-500"></i> Instant Quote
-                </a>
-                <a href="#portfolio" class="hover:text-gold-400 transition-colors">Slab Portfolio</a>
-                <a href="#comparison" class="hover:text-gold-400 transition-colors">Stone Comparison</a>
-                <a href="#process" class="hover:text-gold-400 transition-colors">Our Process</a>
-                <a href="#location" class="hover:text-gold-400 transition-colors">Contact</a>
+            <!-- Navigation -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-stone-700">
+                <a href="#estimator" class="hover:text-bronze-600 transition-colors">Quote Calculator</a>
+                <a href="#portfolio" class="hover:text-bronze-600 transition-colors">Slab Inventory</a>
+                <a href="#comparison" class="hover:text-bronze-600 transition-colors">Stone Guide</a>
+                <a href="#process" class="hover:text-bronze-600 transition-colors">Our Process</a>
+                <a href="#location" class="hover:text-bronze-600 transition-colors">Showroom</a>
             </nav>
 
-            <!-- CTA Call Button -->
+            <!-- Header CTAs -->
             <div class="flex items-center gap-3">
-                <a href="tel:12288635084" class="hidden sm:flex items-center gap-2 px-4 py-2 rounded-lg bg-slatecustom hover:bg-slate-700 text-white border border-slate-600 text-sm font-medium transition-all">
-                    <i class="fa-solid fa-phone text-gold-400"></i>
+                <a href="tel:12288635084" class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-lg border border-stone-300 hover:border-stone-900 text-stone-800 text-sm font-semibold transition-colors">
+                    <i class="fa-solid fa-phone text-bronze-600 text-xs"></i>
                     <span>(228) 863-5084</span>
                 </a>
-                <a href="#estimator" class="px-5 py-2.5 rounded-lg bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-charcoal-950 font-bold text-sm shadow-md shadow-gold-500/20 transition-all hover:scale-105">
-                    Estimate Project
+                <a href="#estimator" class="px-5 py-2.5 rounded-lg bg-bronze-600 hover:bg-bronze-700 text-white font-semibold text-sm shadow-sm transition-all">
+                    Instant Quote
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- Brand Overhaul Highlight Banner -->
-    <div class="bg-gradient-to-r from-charcoal-900 via-gold-600/20 to-charcoal-900 border-b border-gold-500/20 py-2.5 text-xs sm:text-sm text-center px-4">
-        <span class="bg-gold-500/20 text-gold-400 font-bold px-2 py-0.5 rounded mr-2 uppercase tracking-wider text-[11px]">Reimagined Top Shop</span>
-        <span>We've modernized our fabrication shop with 3D digital laser templating & CNC precision cutting!</span>
-        <a href="#estimator" class="underline font-semibold text-gold-400 hover:text-white ml-2">Try New Estimator &rarr;</a>
-    </div>
-
-    <!-- Hero Showcase Section -->
-    <section class="relative pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
-        <!-- Background Ambient Glow & Visual Elements -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold-500/10 rounded-full blur-[140px] pointer-events-none"></div>
-        <div class="absolute right-0 top-1/3 w-96 h-96 bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none"></div>
-
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
+    <!-- Editorial Hero Section -->
+    <section class="pt-12 pb-20 lg:pt-20 lg:pb-28 border-b border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                 
-                <!-- Hero Content Left -->
-                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card text-gold-400 text-xs font-semibold uppercase tracking-wider border border-gold-500/30">
-                        <i class="fa-solid fa-gem"></i> Premium Gulf Coast Countertop Artisans
+                <!-- Left Column: Value Proposition -->
+                <div class="lg:col-span-6 space-y-7">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-stone-100 border border-stone-200 text-stone-700 text-xs font-semibold tracking-wide uppercase">
+                        <span class="w-2 h-2 rounded-full bg-bronze-600"></span>
+                        Gulf Coast Custom Countertop Artisans
                     </div>
-                    
-                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-white leading-tight">
-                        Transform Your Space With <span class="gold-gradient-text">Custom Stone Slabs</span>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-[62px] font-serif font-semibold text-stone-900 leading-[1.06] tracking-tight">
+                        Precision Stone Surfaces, Crafted for <span class="italic font-normal text-bronze-600">Timeless Living.</span>
                     </h1>
-                    
-                    <p class="text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-light leading-relaxed">
-                        Gulfport’s premier choice for Granite, Quartz, Quartzite, Dolomite & Solid Surface countertops. Precision laser measurement, custom edge fabrication, and flawless 1-day installation.
+
+                    <p class="text-base sm:text-lg text-stone-700 leading-relaxed max-w-xl">
+                        Gulfport’s premier fabrication studio for Quartz, Granite, Quartzite, Dolomite, and Solid Surface countertops. Engineered with 3D laser templating and installed in a single day.
                     </p>
 
-                    <!-- CTAs -->
-                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
-                        <a href="#estimator" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-charcoal-950 font-bold text-base shadow-lg shadow-gold-500/25 transition-all hover:scale-105 flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-calculator"></i> Build Instant Estimate
+                    <!-- Primary & Secondary CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
+                        <a href="#estimator" class="px-7 py-4 rounded-xl bg-bronze-600 hover:bg-bronze-700 text-white font-semibold text-sm sm:text-base shadow-sm transition-all flex items-center justify-center gap-2.5">
+                            <span>Build Your Instant Estimate</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
                         </a>
-                        <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 rounded-xl glass-card hover:bg-slate-700/60 text-white font-semibold text-base border border-slate-600 transition-all flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-cubes-stacked"></i> Explore Live Slabs
+                        <a href="#portfolio" class="px-7 py-4 rounded-xl bg-white hover:bg-stone-100 text-stone-900 font-semibold text-sm sm:text-base border border-stone-300 transition-all flex items-center justify-center gap-2">
+                            <span>Browse Live Slabs</span>
                         </a>
                     </div>
 
-                    <!-- Trust Metrics Grid -->
-                    <div class="pt-8 grid grid-cols-3 gap-4 border-t border-slate-800/80 text-center lg:text-left">
+                    <!-- Clean Trust Metrics -->
+                    <div class="pt-8 border-t border-stone-200 grid grid-cols-3 gap-6">
                         <div>
-                            <p class="text-2xl sm:text-3xl font-bold text-white font-serif">100%</p>
-                            <p class="text-xs text-slate-400 uppercase tracking-wider">Custom Laser Templated</p>
+                            <span class="block text-2xl sm:text-3xl font-serif font-bold text-stone-900">500+</span>
+                            <span class="text-xs text-stone-500 font-medium">Slabs in Gulfport Stock</span>
                         </div>
                         <div>
-                            <p class="text-2xl sm:text-3xl font-bold text-gold-400 font-serif">1-Day</p>
-                            <p class="text-xs text-slate-400 uppercase tracking-wider">Turnaround Installation</p>
+                            <span class="block text-2xl sm:text-3xl font-serif font-bold text-stone-900">1-Day</span>
+                            <span class="text-xs text-stone-500 font-medium">Clean Home Installation</span>
                         </div>
                         <div>
-                            <p class="text-2xl sm:text-3xl font-bold text-white font-serif">500+</p>
-                            <p class="text-xs text-slate-400 uppercase tracking-wider">Slabs in Local Inventory</p>
+                            <span class="block text-2xl sm:text-3xl font-serif font-bold text-stone-900">100%</span>
+                            <span class="text-xs text-stone-500 font-medium">3D Laser Templated</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Hero Visual Right / Featured Showcase Card -->
-                <div class="lg:col-span-5 relative">
-                    <div class="relative rounded-2xl overflow-hidden glass-card p-2 border border-slate-700 shadow-2xl group">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=80" 
-                             alt="Luxury Quartz Kitchen Island Countertop" 
-                             class="w-full h-[420px] object-cover rounded-xl group-hover:scale-105 transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-transparent to-transparent opacity-90 rounded-xl"></div>
-                        
-                        <!-- Floating Badge -->
-                        <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl glass-panel border border-gold-500/30">
-                            <div class="flex items-center justify-between">
-                                <div>
-                                    <span class="text-xs font-semibold text-gold-400 uppercase">Featured Slab Highlight</span>
-                                    <h3 class="text-white font-bold text-lg">Calacatta Gold Quartzite</h3>
-                                    <p class="text-xs text-slate-300">Installed in Gulfport, MS • Waterfall Edge</p>
-                                </div>
-                                <span class="bg-gold-500 text-charcoal-950 font-bold text-xs px-2.5 py-1 rounded-full">Top Rated</span>
+                <!-- Right Column: Architectural Photography Showcase -->
+                <div class="lg:col-span-6">
+                    <div class="relative">
+                        <div class="rounded-2xl overflow-hidden bg-stone-200 border border-stone-200 shadow-xl shadow-stone-900/5">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85" 
+                                 alt="Custom Calacatta Quartzite Kitchen Island" 
+                                 class="w-full h-[460px] lg:h-[520px] object-cover">
+                        </div>
+
+                        <!-- Clean Showroom Spec Card Overlay -->
+                        <div class="sm:absolute sm:-bottom-6 sm:left-6 sm:right-6 mt-4 sm:mt-0 bg-white/95 backdrop-blur-md p-5 rounded-xl border border-stone-200 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div>
+                                <span class="text-[11px] font-bold uppercase tracking-widest text-bronze-600 block">Featured Installation</span>
+                                <h2 class="text-lg font-serif font-bold text-stone-900">Calacatta Gold Quartzite — Waterfall Island</h2>
+                                <p class="text-xs text-stone-500 mt-0.5">Fabricated & installed in Gulfport, MS • Custom Mitered Edge</p>
                             </div>
+                            <a href="#estimator" class="shrink-0 text-xs font-bold uppercase tracking-wider text-stone-900 hover:text-bronze-600 flex items-center gap-1.5">
+                                Price Similar <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -207,173 +222,178 @@
         </div>
     </section>
 
-    <section id="estimator" class="py-16 bg-charcoal-900 border-y border-slate-800 relative">
+    <!-- Interactive Quote Estimator Section -->
+    <section id="estimator" class="py-20 lg:py-24 bg-stone-100/70 border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-gold-400 text-xs font-bold uppercase tracking-widest bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">
-                    Dynamic Price Estimator
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-3">Interactive Countertop Calculator</h2>
-                <p class="text-slate-400 text-sm sm:text-base mt-2">
-                    Configure your kitchen or bathroom layout, choose stone material, edge profiles, and add-ons for an instant preliminary estimate.
+            <!-- Section Header -->
+            <div class="max-w-2xl mb-12">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-bronze-600">Interactive Pricing Tool</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-stone-900 mt-2">
+                    Project Cost Calculator
+                </h2>
+                <p class="text-stone-700 text-sm sm:text-base mt-3 leading-relaxed">
+                    Select your stone material, approximate square footage, edge finish, and sink cutouts to receive a transparent preliminary estimate—including fabrication and installation.
                 </p>
             </div>
 
-            <!-- Estimator Grid Layout -->
             <div class="grid lg:grid-cols-12 gap-8 items-start">
                 
-                <!-- Main Form Wizard (Left 7 Cols) -->
-                <div class="lg:col-span-7 glass-panel rounded-2xl p-6 sm:p-8 space-y-8 border border-slate-700">
+                <!-- Left 7 Columns: Step-by-Step Configurator -->
+                <div class="lg:col-span-7 bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm space-y-9">
                     
-                    <!-- STEP 1: Material Selection -->
+                    <!-- Step 1: Material -->
                     <div>
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                                <span class="w-7 h-7 rounded-full bg-gold-500 text-charcoal-950 font-bold text-xs flex items-center justify-center">1</span>
-                                Select Stone Material
-                            </h3>
-                            <span class="text-xs text-gold-400 italic" id="selectedMaterialLabel">Quartz ($65/sq.ft avg)</span>
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                            <div class="flex items-center gap-3">
+                                <span class="w-7 h-7 rounded-full bg-stone-900 text-white text-xs font-bold flex items-center justify-center">1</span>
+                                <h3 class="text-lg font-bold text-stone-900">Choose Stone Surface</h3>
+                            </div>
+                            <span class="text-xs font-semibold text-bronze-600 bg-bronze-50 px-2.5 py-1 rounded-md border border-bronze-100" id="selectedMaterialLabel">
+                                Quartz ($65/sq.ft avg)
+                            </span>
                         </div>
-                        
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" id="materialOptions">
-                            <!-- Injected JS Option Cards -->
+                            <!-- Populated by JS -->
                         </div>
                     </div>
 
-                    <!-- STEP 2: Layout & Dimensions -->
-                    <div class="pt-6 border-t border-slate-800">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                                <span class="w-7 h-7 rounded-full bg-gold-500 text-charcoal-950 font-bold text-xs flex items-center justify-center">2</span>
-                                Layout & Square Footage
-                            </h3>
-                            <span class="text-xs text-slate-400">Total: <strong class="text-gold-400 text-sm" id="sqftDisplay">45</strong> sq. ft</span>
+                    <!-- Step 2: Layout & Square Footage -->
+                    <div class="pt-8 border-t border-stone-200">
+                        <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+                            <div class="flex items-center gap-3">
+                                <span class="w-7 h-7 rounded-full bg-stone-900 text-white text-xs font-bold flex items-center justify-center">2</span>
+                                <h3 class="text-lg font-bold text-stone-900">Kitchen Layout & Area</h3>
+                            </div>
+                            <span class="text-sm text-stone-600">
+                                Area: <strong class="text-stone-900 font-bold" id="sqftDisplay">45</strong> sq. ft.
+                            </span>
                         </div>
 
-                        <!-- Layout Type Selector -->
-                        <div class="grid grid-cols-3 sm:grid-cols-5 gap-2 mb-6" id="layoutOptions">
-                            <!-- Layout Cards JS Injected -->
+                        <!-- Layout Selector -->
+                        <div class="grid grid-cols-3 sm:grid-cols-5 gap-2.5 mb-6" id="layoutOptions">
+                            <!-- Populated by JS -->
                         </div>
 
-                        <!-- Slider & Precise Input -->
-                        <div class="bg-charcoal-950/60 rounded-xl p-4 border border-slate-800 space-y-4">
-                            <div class="flex justify-between items-center text-sm">
-                                <label for="sqftRange" class="font-medium text-slate-300">Adjust Total Surface Area</label>
-                                <div class="flex items-center gap-1">
-                                    <input type="number" id="sqftInput" min="10" max="300" value="45" class="w-20 bg-slatecustom border border-slate-700 rounded-lg px-2 py-1 text-center font-bold text-gold-400 focus:outline-none focus:border-gold-500">
-                                    <span class="text-xs text-slate-400">SQ FT</span>
+                        <!-- Area Slider Box -->
+                        <div class="bg-stone-50 rounded-xl p-5 border border-stone-200 space-y-4">
+                            <div class="flex items-center justify-between">
+                                <label for="sqftRange" class="text-sm font-semibold text-stone-800">Estimated Square Footage</label>
+                                <div class="flex items-center gap-2">
+                                    <input type="number" id="sqftInput" min="10" max="300" value="45" 
+                                           class="w-20 bg-white border border-stone-300 rounded-lg px-2.5 py-1.5 text-center font-bold text-stone-900 text-sm focus:outline-none focus:border-bronze-600">
+                                    <span class="text-xs font-semibold text-stone-500">SQ FT</span>
                                 </div>
                             </div>
-                            <input type="range" id="sqftRange" min="10" max="250" value="45" class="w-full h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer">
-                            <div class="flex justify-between text-[11px] text-slate-500 font-mono">
-                                <span>10 sq ft (Vanity)</span>
-                                <span>45 sq ft (Standard)</span>
-                                <span>120+ sq ft (Large Kitchen)</span>
+                            <input type="range" id="sqftRange" min="10" max="250" value="45" class="w-full">
+                            <div class="flex justify-between text-xs text-stone-500">
+                                <span>10 sq ft (Bath Vanity)</span>
+                                <span>45 sq ft (Avg. Kitchen)</span>
+                                <span>120+ sq ft (Large + Island)</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- STEP 3: Edge Profile -->
-                    <div class="pt-6 border-t border-slate-800">
-                        <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                            <span class="w-7 h-7 rounded-full bg-gold-500 text-charcoal-950 font-bold text-xs flex items-center justify-center">3</span>
-                            Select Edge Finish
-                        </h3>
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3" id="edgeOptions">
-                            <!-- Edge Options JS Injected -->
+                    <!-- Step 3: Edge Profile -->
+                    <div class="pt-8 border-t border-stone-200">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-7 h-7 rounded-full bg-stone-900 text-white text-xs font-bold flex items-center justify-center">3</span>
+                            <h3 class="text-lg font-bold text-stone-900">Select Edge Profile</h3>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3" id="edgeOptions">
+                            <!-- Populated by JS -->
                         </div>
                     </div>
 
-                    <!-- STEP 4: Custom Add-Ons -->
-                    <div class="pt-6 border-t border-slate-800">
-                        <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                            <span class="w-7 h-7 rounded-full bg-gold-500 text-charcoal-950 font-bold text-xs flex items-center justify-center">4</span>
-                            Cutouts & Upgrades
-                        </h3>
+                    <!-- Step 4: Cutouts & Add-ons -->
+                    <div class="pt-8 border-t border-stone-200">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-7 h-7 rounded-full bg-stone-900 text-white text-xs font-bold flex items-center justify-center">4</span>
+                            <h3 class="text-lg font-bold text-stone-900">Cutouts & Fabrication Options</h3>
+                        </div>
                         <div class="grid sm:grid-cols-2 gap-3" id="addonOptions">
-                            <!-- Addon Options JS Injected -->
+                            <!-- Populated by JS -->
                         </div>
                     </div>
 
                 </div>
 
-                <!-- Live Summary & Lead Capture Form (Right 5 Cols) -->
+                <!-- Right 5 Columns: Sticky Estimate Summary & Lead Form -->
                 <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-28">
                     
-                    <!-- Dynamic Live Cost Card -->
-                    <div class="glass-panel rounded-2xl p-6 border-2 border-gold-500/40 shadow-xl shadow-gold-500/5 relative overflow-hidden">
-                        <div class="absolute top-0 right-0 bg-gold-500 text-charcoal-950 font-extrabold text-[10px] uppercase px-3 py-1 rounded-bl-lg">
-                            Live Calculation
+                    <!-- Live Summary Card -->
+                    <div class="bg-stone-900 text-white rounded-2xl p-6 sm:p-8 shadow-lg">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="text-xs font-bold uppercase tracking-widest text-stone-400">Preliminary Estimate</span>
+                            <span class="text-[11px] font-semibold bg-bronze-600 text-white px-2.5 py-0.5 rounded-full">Live Calculation</span>
                         </div>
 
-                        <h3 class="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-2">Estimated Project Total</h3>
-                        <div class="flex items-baseline gap-2 mb-6">
+                        <div class="flex items-baseline gap-2.5 pb-6 border-b border-stone-800">
                             <span class="text-4xl sm:text-5xl font-serif font-bold text-white" id="totalCostDisplay">$3,150</span>
-                            <span class="text-xs text-slate-400">Estimated Total*</span>
+                            <span class="text-xs text-stone-400">Turnkey Installed*</span>
                         </div>
 
-                        <!-- Itemized Breakdown -->
-                        <div class="space-y-2.5 text-xs border-t border-b border-slate-800 py-4 font-mono">
+                        <!-- Line Items -->
+                        <div class="space-y-3 py-5 text-sm border-b border-stone-800">
                             <div class="flex justify-between">
-                                <span class="text-slate-400" id="summaryMaterialName">Quartz Material</span>
-                                <span class="text-white font-semibold" id="summaryMaterialCost">$2,925</span>
+                                <span class="text-stone-300" id="summaryMaterialName">Quartz Stone (45 sq ft)</span>
+                                <span class="font-semibold text-white" id="summaryMaterialCost">$2,925</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-400" id="summaryEdgeName">Eased Edge Profile</span>
-                                <span class="text-white font-semibold" id="summaryEdgeCost">$0</span>
+                                <span class="text-stone-300" id="summaryEdgeName">Eased / Square Profile</span>
+                                <span class="font-semibold text-white" id="summaryEdgeCost">Included</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-slate-400">Selected Add-ons</span>
-                                <span class="text-white font-semibold" id="summaryAddonsCost">$225</span>
+                                <span class="text-stone-300">Cutouts & Upgrades</span>
+                                <span class="font-semibold text-white" id="summaryAddonsCost">$225</span>
                             </div>
-                            <div class="flex justify-between text-gold-400 font-bold pt-2 border-t border-slate-800/60">
-                                <span>Includes Precision Fabrication & Install</span>
-                                <span>INCLUDED</span>
+                            <div class="flex justify-between text-xs pt-2 text-stone-400">
+                                <span>3D Laser Templating & Installation</span>
+                                <span class="text-emerald-400 font-semibold">Included</span>
                             </div>
                         </div>
 
-                        <p class="text-[11px] text-slate-500 mt-3 italic leading-tight">
-                            *Final pricing subject to free on-site laser template measurement and physical slab selection in Gulfport showroom.
+                        <p class="text-[11px] text-stone-400 mt-4 leading-relaxed">
+                            *Preliminary estimate based on selected dimensions. Exact pricing is confirmed after your complimentary on-site laser measurement and slab selection.
                         </p>
                     </div>
 
-                    <!-- STEP 5: Lead Capture Box -->
-                    <div class="glass-panel rounded-2xl p-6 border border-slate-700">
-                        <h4 class="text-base font-bold text-white mb-1 flex items-center gap-2">
-                            <i class="fa-solid fa-paper-plane text-gold-400"></i> Save Quote & Schedule Measurement
-                        </h4>
-                        <p class="text-xs text-slate-400 mb-4">Lock in your estimated discount rate with our Gulfport team.</p>
+                    <!-- Lead Capture Card -->
+                    <div class="bg-white rounded-2xl p-6 sm:p-7 border border-stone-200 shadow-sm">
+                        <h4 class="text-lg font-bold text-stone-900">Lock In This Estimate</h4>
+                        <p class="text-xs text-stone-600 mt-1 mb-5">Send your configuration to our Gulfport showroom to reserve slab pricing and schedule a free home measurement.</p>
 
-                        <form id="quoteSubmitForm" onsubmit="handleQuoteSubmit(event)" class="space-y-3">
-                            <div class="grid grid-cols-2 gap-3">
+                        <form id="quoteSubmitForm" onsubmit="handleQuoteSubmit(event)" class="space-y-3.5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                 <div>
-                                    <label class="block text-[11px] font-medium text-slate-300 mb-1">First & Last Name *</label>
-                                    <input type="text" required placeholder="John Doe" class="w-full bg-slatecustom border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-gold-500">
+                                    <label class="block text-xs font-semibold text-stone-700 mb-1">Full Name *</label>
+                                    <input type="text" required placeholder="Jane Smith" class="w-full bg-stone-50 border border-stone-300 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-bronze-600 focus:bg-white">
                                 </div>
                                 <div>
-                                    <label class="block text-[11px] font-medium text-slate-300 mb-1">Phone Number *</label>
-                                    <input type="tel" required placeholder="(228) 000-0000" class="w-full bg-slatecustom border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-gold-500">
+                                    <label class="block text-xs font-semibold text-stone-700 mb-1">Phone Number *</label>
+                                    <input type="tel" required placeholder="(228) 555-0199" class="w-full bg-stone-50 border border-stone-300 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-bronze-600 focus:bg-white">
                                 </div>
                             </div>
 
-                            <div>
-                                <label class="block text-[11px] font-medium text-slate-300 mb-1">Email Address *</label>
-                                <input type="email" required placeholder="john@example.com" class="w-full bg-slatecustom border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-gold-500">
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                                <div class="sm:col-span-2">
+                                    <label class="block text-xs font-semibold text-stone-700 mb-1">Email Address *</label>
+                                    <input type="email" required placeholder="jane@example.com" class="w-full bg-stone-50 border border-stone-300 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-bronze-600 focus:bg-white">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-semibold text-stone-700 mb-1">Zip Code</label>
+                                    <input type="text" placeholder="39501" class="w-full bg-stone-50 border border-stone-300 rounded-lg px-3.5 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-bronze-600 focus:bg-white">
+                                </div>
                             </div>
 
                             <div>
-                                <label class="block text-[11px] font-medium text-slate-300 mb-1">Gulfport / Local Zip Code</label>
-                                <input type="text" placeholder="39501" class="w-full bg-slatecustom border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-gold-500">
+                                <label class="block text-xs font-semibold text-stone-700 mb-1">Project Notes (Optional)</label>
+                                <textarea rows="2" placeholder="Tell us about your timeline, color preferences, or island dimensions..." class="w-full bg-stone-50 border border-stone-300 rounded-lg px-3.5 py-2 text-sm text-stone-900 focus:outline-none focus:border-bronze-600 focus:bg-white resize-none"></textarea>
                             </div>
 
-                            <div>
-                                <label class="block text-[11px] font-medium text-slate-300 mb-1">Project Notes / Sketch Upload</label>
-                                <textarea rows="2" placeholder="Kitchen remodel, replacing laminate, interested in white quartz with gray veining..." class="w-full bg-slatecustom border border-slate-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-gold-500 resize-none"></textarea>
-                            </div>
-
-                            <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-gold-500 to-gold-600 hover:from-gold-400 hover:to-gold-500 text-charcoal-950 font-bold text-sm shadow-md shadow-gold-500/20 transition-all">
-                                Send My Estimate To Top Shop &rarr;
+                            <button type="submit" class="w-full py-3.5 rounded-xl bg-bronze-600 hover:bg-bronze-700 text-white font-semibold text-sm shadow-sm transition-all flex items-center justify-center gap-2">
+                                <span>Request Free Measurement & Quote</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
                             </button>
                         </form>
                     </div>
@@ -381,238 +401,256 @@
                 </div>
 
             </div>
-
         </div>
     </section>
 
-    <section id="portfolio" class="py-20 relative">
+    <!-- Live Slab Portfolio Gallery -->
+    <section id="portfolio" class="py-20 lg:py-24 border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
                 <div>
-                    <span class="text-gold-400 text-xs font-bold uppercase tracking-widest bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">
-                        In-Stock Inventory
-                    </span>
-                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-3">Interactive Slab Portfolio</h2>
-                    <p class="text-slate-400 text-sm mt-2">Explore local Gulfport stone slabs. Click any slab to preview vein detail and send to estimator.</p>
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-bronze-600">Gulfport Slab Yard</span>
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-stone-900 mt-2">In-Stock Stone Inventory</h2>
+                    <p class="text-stone-700 text-sm sm:text-base mt-2 max-w-xl">
+                        Inspect veining, durability ratings, and square-foot pricing across our curated local inventory. Click any slab to load it directly into your quote calculator.
+                    </p>
                 </div>
 
-                <!-- Category Filter Buttons -->
+                <!-- Category Filter Pills -->
                 <div class="flex flex-wrap gap-2" id="portfolioFilterContainer">
-                    <!-- Filter Buttons JS Populated -->
+                    <!-- Populated by JS -->
                 </div>
             </div>
 
-            <!-- Slab Portfolio Gallery Grid -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="slabGrid">
-                <!-- Injected via JavaScript -->
+            <!-- Slab Cards Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="slabGrid">
+                <!-- Populated by JS -->
             </div>
 
         </div>
     </section>
 
-    <section id="comparison" class="py-16 bg-charcoal-900 border-t border-slate-800">
+    <!-- Material Comparison Matrix -->
+    <section id="comparison" class="py-20 lg:py-24 bg-stone-100/70 border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-gold-400 text-xs font-bold uppercase tracking-widest bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">
-                    Material Science
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-3">Stone Material Comparison Matrix</h2>
-                <p class="text-slate-400 text-sm mt-2">Compare durability, maintenance requirements, and heat resistance across stone categories to choose the best surface for your lifestyle.</p>
+            <div class="max-w-2xl mb-12">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-bronze-600">Material Buying Guide</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-stone-900 mt-2">Compare Stone Performance</h2>
+                <p class="text-stone-700 text-sm sm:text-base mt-3">
+                    Not sure whether engineered Quartz or natural Quartzite fits your kitchen best? Compare heat tolerance, scratch resistance, and care requirements side-by-side.
+                </p>
             </div>
 
-            <!-- Interactive Comparison Table -->
-            <div class="overflow-x-auto glass-panel rounded-2xl border border-slate-700">
-                <table class="w-full text-left text-sm">
-                    <thead>
-                        <tr class="border-b border-slate-700 bg-charcoal-950/80 text-xs font-bold uppercase text-gold-400">
-                            <th class="p-4 sm:p-5">Stone Category</th>
-                            <th class="p-4 sm:p-5">Heat Resistance</th>
-                            <th class="p-4 sm:p-5">Scratch Resistance</th>
-                            <th class="p-4 sm:p-5">Stain Resistance</th>
-                            <th class="p-4 sm:p-5">Maintenance Level</th>
-                            <th class="p-4 sm:p-5">Price Range</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-800 text-slate-300" id="comparisonTableBody">
-                        <!-- JS Injected Rows -->
-                    </tbody>
-                </table>
+            <div class="bg-white rounded-2xl border border-stone-200 shadow-sm overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-stone-900 text-stone-100 text-xs font-bold uppercase tracking-wider">
+                                <th class="py-4 px-6">Stone Surface</th>
+                                <th class="py-4 px-6">Heat Tolerance</th>
+                                <th class="py-4 px-6">Scratch Resistance</th>
+                                <th class="py-4 px-6">Stain Protection</th>
+                                <th class="py-4 px-6">Care & Sealing</th>
+                                <th class="py-4 px-6">Installed Range</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-stone-200 text-sm text-stone-700" id="comparisonTableBody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
 
         </div>
     </section>
 
-    <section id="process" class="py-20 relative">
+    <!-- 4-Step Fabrication Process -->
+    <section id="process" class="py-20 lg:py-24 border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-gold-400 text-xs font-bold uppercase tracking-widest bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">
-                    The Top Shop Way
-                </span>
-                <h2 class="text-3xl sm:text-4xl font-serif font-bold text-white mt-3">Precision 4-Step Craftsmanship</h2>
-                <p class="text-slate-400 text-sm mt-2">How we guarantee seamless seams, perfect edge profiles, and stress-free countertop installation.</p>
+            <div class="max-w-2xl mb-14">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-bronze-600">How It Works</span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-semibold text-stone-900 mt-2">From Slab Selection to 1-Day Install</h2>
+                <p class="text-stone-700 text-sm sm:text-base mt-3">
+                    Our digital-first fabrication process eliminates guesswork, minimizes kitchen downtime, and guarantees seamless joints.
+                </p>
             </div>
 
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 
-                <!-- Step 1 -->
-                <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-gold-500/40 transition-all relative group">
-                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 font-bold text-xl flex items-center justify-center mb-4 border border-gold-500/20 group-hover:bg-gold-500 group-hover:text-charcoal-950 transition-colors">
-                        01
+                <div class="bg-white p-7 rounded-2xl border border-stone-200 flex flex-col justify-between">
+                    <div>
+                        <span class="text-3xl font-serif font-bold text-bronze-600 block mb-4">01</span>
+                        <h3 class="text-lg font-bold text-stone-900 mb-2">Estimate & Slab Viewing</h3>
+                        <p class="text-sm text-stone-600 leading-relaxed">
+                            Build your preliminary quote online, then visit our 20th Ave showroom in Gulfport to hand-select your full stone slabs.
+                        </p>
                     </div>
-                    <h3 class="text-white font-bold text-lg mb-2">Free Instant Estimate</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        Use our online tool or drop by our 20th Ave showroom in Gulfport to review live slabs and calculate initial square footage costs.
-                    </p>
+                    <div class="mt-6 pt-4 border-t border-stone-100 text-xs font-semibold text-stone-500">
+                        Same-Day Pricing
+                    </div>
                 </div>
 
-                <!-- Step 2 -->
-                <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-gold-500/40 transition-all relative group">
-                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 font-bold text-xl flex items-center justify-center mb-4 border border-gold-500/20 group-hover:bg-gold-500 group-hover:text-charcoal-950 transition-colors">
-                        02
+                <div class="bg-white p-7 rounded-2xl border border-stone-200 flex flex-col justify-between">
+                    <div>
+                        <span class="text-3xl font-serif font-bold text-bronze-600 block mb-4">02</span>
+                        <h3 class="text-lg font-bold text-stone-900 mb-2">3D Laser Templating</h3>
+                        <p class="text-sm text-stone-600 leading-relaxed">
+                            Our technicians capture sub-millimeter digital measurements of your cabinetry and walls—no messy plywood templates required.
+                        </p>
                     </div>
-                    <h3 class="text-white font-bold text-lg mb-2">Laser Digital Templating</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        Our technicians visit your home to capture sub-millimeter 3D digital measurements of your cabinets and wall contours.
-                    </p>
+                    <div class="mt-6 pt-4 border-t border-stone-100 text-xs font-semibold text-stone-500">
+                        Sub-Millimeter Accuracy
+                    </div>
                 </div>
 
-                <!-- Step 3 -->
-                <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-gold-500/40 transition-all relative group">
-                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 font-bold text-xl flex items-center justify-center mb-4 border border-gold-500/20 group-hover:bg-gold-500 group-hover:text-charcoal-950 transition-colors">
-                        03
+                <div class="bg-white p-7 rounded-2xl border border-stone-200 flex flex-col justify-between">
+                    <div>
+                        <span class="text-3xl font-serif font-bold text-bronze-600 block mb-4">03</span>
+                        <h3 class="text-lg font-bold text-stone-900 mb-2">CNC Waterjet Fabrication</h3>
+                        <p class="text-sm text-stone-600 leading-relaxed">
+                            Computer-guided diamond saws and waterjets cut sink openings, align natural veining, and polish custom edge profiles.
+                        </p>
                     </div>
-                    <h3 class="text-white font-bold text-lg mb-2">Precision CNC Fabrication</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        Waterjet CNC cutting machinery shapes stone edges, sink cutouts, and vein matches with extreme structural accuracy.
-                    </p>
+                    <div class="mt-6 pt-4 border-t border-stone-100 text-xs font-semibold text-stone-500">
+                        In-House Gulfport Shop
+                    </div>
                 </div>
 
-                <!-- Step 4 -->
-                <div class="glass-panel p-6 rounded-2xl border border-slate-800 hover:border-gold-500/40 transition-all relative group">
-                    <div class="w-12 h-12 rounded-xl bg-gold-500/10 text-gold-400 font-bold text-xl flex items-center justify-center mb-4 border border-gold-500/20 group-hover:bg-gold-500 group-hover:text-charcoal-950 transition-colors">
-                        04
+                <div class="bg-white p-7 rounded-2xl border border-stone-200 flex flex-col justify-between">
+                    <div>
+                        <span class="text-3xl font-serif font-bold text-bronze-600 block mb-4">04</span>
+                        <h3 class="text-lg font-bold text-stone-900 mb-2">1-Day Clean Installation</h3>
+                        <p class="text-sm text-stone-600 leading-relaxed">
+                            Our certified crew installs your countertops, color-matches seams, mounts your undermount sink, and seals the stone in one visit.
+                        </p>
                     </div>
-                    <h3 class="text-white font-bold text-lg mb-2">Expert 1-Day Installation</h3>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        Our certified local installers arrive on time, mount your custom stone, level seams, attach sinks, and seal your surfaces.
-                    </p>
+                    <div class="mt-6 pt-4 border-t border-stone-100 text-xs font-semibold text-stone-500">
+                        Turnkey Completion
+                    </div>
                 </div>
 
             </div>
-
         </div>
     </section>
 
-    <section class="py-16 bg-charcoal-900 border-y border-slate-800">
+    <!-- Before & After Client Transformation -->
+    <section class="py-20 lg:py-24 bg-stone-100/70 border-b border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                    <span class="text-gold-400 text-xs font-bold uppercase tracking-widest bg-gold-500/10 px-3 py-1 rounded-full border border-gold-500/20">
-                        Gulfport Client Transformation
-                    </span>
-                    <h2 class="text-3xl font-serif font-bold text-white mt-3">From Dated Laminate to Luxury Quartzite</h2>
-                    <p class="text-slate-300 text-sm mt-3 leading-relaxed">
-                        Notice how replacing old tile/laminate countertops with seamless, custom-fabricated quartzite instantly elevates home value and kitchen aesthetics.
+            <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-5">
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-bronze-600">Recent Gulfport Project</span>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-semibold text-stone-900 leading-tight">
+                        From Dated Laminate to Seamless Quartzite
+                    </h2>
+                    <p class="text-sm sm:text-base text-stone-700 leading-relaxed">
+                        Replacing worn laminate surfaces with full-slab natural quartzite completely transforms light reflection, workspace durability, and home resale value—without altering existing cabinetry.
                     </p>
                     
-                    <div class="mt-6 space-y-3 text-xs text-slate-300">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-check text-gold-400"></i>
-                            <span>Custom Waterfall Edge Profile</span>
+                    <ul class="space-y-3 pt-2 text-sm text-stone-800 font-medium">
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-bronze-100 text-bronze-600 flex items-center justify-center text-xs"><i class="fa-solid fa-check"></i></span>
+                            Custom Mitered Waterfall Island Edge
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-bronze-100 text-bronze-600 flex items-center justify-center text-xs"><i class="fa-solid fa-check"></i></span>
+                            CNC Undermount Sink Cutout & Polish
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-5 h-5 rounded-full bg-bronze-100 text-bronze-600 flex items-center justify-center text-xs"><i class="fa-solid fa-check"></i></span>
+                            Old Countertop Removal & Same-Day Install
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-7 grid sm:grid-cols-2 gap-5">
+                    <div class="bg-white p-3 rounded-2xl border border-stone-200 shadow-sm">
+                        <div class="relative rounded-xl overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-stone-900/85 backdrop-blur-sm text-white text-[11px] font-bold px-3 py-1 rounded-md uppercase tracking-wider">Before</span>
+                            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80" alt="Kitchen before countertop remodel" class="h-72 w-full object-cover">
                         </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-check text-gold-400"></i>
-                            <span>Undermount Composite Sink Cutout</span>
+                        <p class="text-xs text-stone-500 mt-3 px-1">Original worn surfaces prior to laser templating</p>
+                    </div>
+
+                    <div class="bg-white p-3 rounded-2xl border border-bronze-500/40 shadow-sm">
+                        <div class="relative rounded-xl overflow-hidden">
+                            <span class="absolute top-3 left-3 bg-bronze-600 text-white text-[11px] font-bold px-3 py-1 rounded-md uppercase tracking-wider">After Top Shop</span>
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" alt="Remodeled kitchen with custom stone island" class="h-72 w-full object-cover">
                         </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-check text-gold-400"></i>
-                            <span>Precision Backsplash Height Matching</span>
-                        </div>
+                        <p class="text-xs text-stone-700 font-medium mt-3 px-1">Completed in 1 day with Calacatta Gold Quartzite</p>
                     </div>
                 </div>
 
-                <!-- Side by Side Visual Comparison -->
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="relative rounded-xl overflow-hidden border border-slate-700">
-                        <span class="absolute top-3 left-3 bg-red-950/80 text-red-300 text-[10px] font-bold px-2.5 py-1 rounded uppercase">Before</span>
-                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Outdated kitchen before renovation" class="h-64 w-full object-cover">
-                    </div>
-                    <div class="relative rounded-xl overflow-hidden border border-gold-500/40 shadow-lg shadow-gold-500/10">
-                        <span class="absolute top-3 left-3 bg-gold-500 text-charcoal-950 text-[10px] font-bold px-2.5 py-1 rounded uppercase">After Top Shop</span>
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Luxury renovated kitchen" class="h-64 w-full object-cover">
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
-    <footer id="location" class="bg-charcoal-950 pt-16 pb-12 border-t border-slate-800 text-slate-400 text-sm">
+    <!-- Showroom Location & Footer -->
+    <footer id="location" class="bg-stone-900 text-stone-300 pt-16 pb-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-12 gap-10">
+            <div class="grid lg:grid-cols-12 gap-12 pb-12 border-b border-stone-800">
                 
-                <!-- Business Info & Legacy Modernization Address (5 Cols) -->
-                <div class="lg:col-span-5 space-y-4">
+                <!-- Showroom Details -->
+                <div class="lg:col-span-5 space-y-5">
                     <div class="flex items-center gap-3">
-                        <div class="w-9 h-9 rounded-lg bg-gold-500 flex items-center justify-center text-charcoal-950 font-black text-lg">
+                        <div class="w-9 h-9 rounded-lg bg-bronze-600 text-white flex items-center justify-center font-serif font-bold text-lg">
                             TS
                         </div>
-                        <span class="text-2xl font-serif font-bold text-white">TOP SHOP</span>
+                        <span class="text-2xl font-serif font-bold text-white tracking-tight">TOP SHOP</span>
                     </div>
 
-                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
-                        Gulfport's premier countertop fabrication center specializing in Granite, Quartz, Quartzite, Dolomite, and custom solid surface solutions.
+                    <p class="text-sm text-stone-400 leading-relaxed max-w-sm">
+                        Gulfport’s premier custom countertop fabricator and slab showroom. Serving homeowners, builders, and designers across the Mississippi Gulf Coast.
                     </p>
 
-                    <div class="space-y-2.5 text-xs pt-2">
+                    <div class="space-y-3.5 pt-2 text-sm">
                         <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-location-dot text-gold-400 mt-1"></i>
+                            <i class="fa-solid fa-location-dot text-bronze-500 mt-1"></i>
                             <div>
-                                <strong class="text-white block">Fabrication Shop & Showroom:</strong>
-                                <span>2900 20th Ave, Gulfport, MS 39501, United States</span>
+                                <strong class="text-white block">Showroom & Fabrication Facility</strong>
+                                <span class="text-stone-400">2900 20th Ave, Gulfport, MS 39501</span>
                             </div>
                         </div>
 
                         <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-phone text-gold-400"></i>
-                            <a href="tel:12288635084" class="text-white hover:text-gold-400 font-semibold transition-colors">(228) 863-5084</a>
+                            <i class="fa-solid fa-phone text-bronze-500"></i>
+                            <a href="tel:12288635084" class="text-white hover:text-bronze-100 font-semibold transition-colors">(228) 863-5084</a>
                         </div>
 
                         <div class="flex items-start gap-3">
-                            <i class="fa-solid fa-clock text-gold-400 mt-1"></i>
+                            <i class="fa-solid fa-clock text-bronze-500 mt-1"></i>
                             <div>
-                                <strong class="text-white block">Operating Hours:</strong>
-                                <span class="text-emerald-400 font-semibold">Open Now</span> • Closes 4:30 PM (Mon-Fri)
+                                <strong class="text-white block">Showroom Hours</strong>
+                                <span class="text-stone-400">Monday – Friday: 8:00 AM – 4:30 PM</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Interactive Simulated Map Preview (7 Cols) -->
-                <div class="lg:col-span-7 glass-panel p-4 rounded-2xl border border-slate-800">
-                    <div class="flex justify-between items-center mb-3 px-2">
-                        <span class="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                            <i class="fa-solid fa-map-location-dot text-gold-400"></i> Gulfport Showroom Location
+                <!-- Map Card -->
+                <div class="lg:col-span-7 bg-stone-800/60 p-5 rounded-2xl border border-stone-800">
+                    <div class="flex flex-wrap justify-between items-center gap-2 mb-3.5">
+                        <span class="text-xs font-bold uppercase tracking-wider text-white flex items-center gap-2">
+                            <i class="fa-solid fa-map-pin text-bronze-500"></i> Visit Our Gulfport Slab Yard
                         </span>
-                        <a href="https://maps.google.com/?q=2900+20th+Ave,+Gulfport,+MS+39501" target="_blank" class="text-xs text-gold-400 hover:underline">Open in Google Maps &rarr;</a>
+                        <a href="https://maps.google.com/?q=2900+20th+Ave,+Gulfport,+MS+39501" target="_blank" class="text-xs font-semibold text-bronze-100 hover:underline">
+                            Get Directions in Google Maps &rarr;
+                        </a>
                     </div>
                     
-                    <!-- Simulated Google Map Display -->
-                    <div class="relative h-64 rounded-xl overflow-hidden bg-slate-800 flex items-center justify-center border border-slate-700 group">
-                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80" alt="Gulfport Location Map Placeholder" class="w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-500">
-                        
-                        <div class="absolute inset-0 bg-gradient-to-t from-charcoal-950 via-charcoal-950/40 to-transparent"></div>
-
-                        <!-- Map Pin Overlay -->
+                    <div class="relative h-60 rounded-xl overflow-hidden bg-stone-800 border border-stone-700 group">
+                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=1000&q=80" alt="Gulfport Location Map" class="w-full h-full object-cover opacity-35 group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-stone-950/90 via-stone-900/40 to-transparent"></div>
                         <div class="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                            <div class="w-12 h-12 rounded-full bg-gold-500 text-charcoal-950 flex items-center justify-center text-xl shadow-xl shadow-gold-500/30 animate-bounce">
+                            <div class="w-11 h-11 rounded-full bg-bronze-600 text-white flex items-center justify-center text-lg shadow-lg">
                                 <i class="fa-solid fa-store"></i>
                             </div>
-                            <div class="mt-2 glass-panel px-4 py-2 rounded-lg border border-gold-500/30">
+                            <div class="mt-2.5 bg-stone-900/95 px-4 py-2 rounded-lg border border-stone-700">
                                 <strong class="text-white text-sm block">Top Shop Countertops</strong>
-                                <span class="text-xs text-slate-300">2900 20th Ave, Gulfport, MS</span>
+                                <span class="text-xs text-stone-300">2900 20th Ave, Gulfport, MS 39501</span>
                             </div>
                         </div>
                     </div>
@@ -620,75 +658,79 @@
 
             </div>
 
-            <div class="mt-12 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
-                <p>&copy; 2026 Top Shop Gulfport. All rights reserved. Reimagined Digital Showcase.</p>
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-500 gap-4">
+                <p>&copy; 2026 Top Shop Gulfport. All rights reserved.</p>
                 <div class="flex gap-6">
-                    <a href="#" class="hover:text-slate-300">Privacy Policy</a>
-                    <a href="#" class="hover:text-slate-300">Terms of Service</a>
-                    <a href="#" class="hover:text-slate-300">Slab Warranty</a>
+                    <a href="#estimator" class="hover:text-stone-300">Instant Estimator</a>
+                    <a href="#portfolio" class="hover:text-stone-300">Slab Inventory</a>
+                    <a href="#comparison" class="hover:text-stone-300">Stone Comparison</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <div id="slabModal" class="fixed inset-0 z-50 bg-charcoal-950/80 backdrop-blur-md flex items-center justify-center p-4 hidden">
-        <div class="glass-panel max-w-2xl w-full rounded-2xl border border-slate-700 overflow-hidden shadow-2xl relative animate-in fade-in zoom-in duration-200">
-            <button onclick="closeSlabModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slatecustom hover:bg-slate-700 text-white flex items-center justify-center z-10">
+    <!-- Slab Detail Modal -->
+    <div id="slabModal" class="fixed inset-0 z-50 bg-stone-950/70 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-white max-w-2xl w-full rounded-2xl border border-stone-200 overflow-hidden shadow-2xl relative">
+            <button onclick="closeSlabModal()" aria-label="Close modal" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/90 hover:bg-stone-100 text-stone-900 border border-stone-200 flex items-center justify-center z-10 shadow-sm">
                 <i class="fa-solid fa-xmark"></i>
             </button>
 
             <div class="grid sm:grid-cols-2">
                 <img id="modalSlabImg" src="" alt="Slab Detail" class="h-64 sm:h-full w-full object-cover">
                 
-                <div class="p-6 space-y-4">
-                    <div>
-                        <span id="modalSlabCategory" class="text-xs text-gold-400 font-bold uppercase tracking-wider">Quartzite</span>
-                        <h3 id="modalSlabTitle" class="text-2xl font-serif font-bold text-white">Calacatta Gold</h3>
-                        <p id="modalSlabOrigin" class="text-xs text-slate-400">Origin: Premium Quarry Import</p>
+                <div class="p-6 sm:p-7 flex flex-col justify-between space-y-5">
+                    <div class="space-y-3">
+                        <div>
+                            <span id="modalSlabCategory" class="text-xs text-bronze-600 font-bold uppercase tracking-wider">Quartzite</span>
+                            <h3 id="modalSlabTitle" class="text-2xl font-serif font-bold text-stone-900 mt-0.5">Calacatta Gold</h3>
+                            <p id="modalSlabOrigin" class="text-xs text-stone-500">Available in Gulfport Showroom</p>
+                        </div>
+
+                        <p id="modalSlabDesc" class="text-sm text-stone-600 leading-relaxed">
+                            Soft grey and warm gold veining across a cool white background.
+                        </p>
+
+                        <div class="space-y-2.5 text-xs border-t border-b border-stone-200 py-3.5">
+                            <div class="flex justify-between">
+                                <span class="text-stone-500">Durability Rating</span>
+                                <span id="modalSlabDurability" class="text-stone-900 font-bold">5/5 Excellent</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-stone-500">Installed Estimate</span>
+                                <span id="modalSlabPrice" class="text-bronze-600 font-bold">$75 - $95 / sq.ft</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-stone-500">Maintenance</span>
+                                <span id="modalSlabMaintenance" class="text-stone-900 font-medium">Low (Pre-Sealed)</span>
+                            </div>
+                        </div>
                     </div>
 
-                    <p id="modalSlabDesc" class="text-xs text-slate-300 leading-relaxed">
-                        Soft grey and warm gold veining across a cool white background. Highly durable natural quartzite stone.
-                    </p>
-
-                    <div class="space-y-2 text-xs border-t border-b border-slate-800 py-3">
-                        <div class="flex justify-between">
-                            <span class="text-slate-400">Durability Rating:</span>
-                            <span id="modalSlabDurability" class="text-gold-400 font-bold">5/5 Excellent</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-slate-400">Est. Price Range:</span>
-                            <span id="modalSlabPrice" class="text-white font-semibold">$75 - $95 / sq.ft</span>
-                        </div>
-                        <div class="flex justify-between">
-                            <span class="text-slate-400">Maintenance:</span>
-                            <span id="modalSlabMaintenance" class="text-slate-300">Low (Pre-Sealed)</span>
-                        </div>
-                    </div>
-
-                    <button id="modalSelectBtn" class="w-full py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-charcoal-950 font-bold text-sm transition-all">
-                        Select This Slab for Quote Calculator &rarr;
+                    <button id="modalSelectBtn" class="w-full py-3.5 rounded-xl bg-bronze-600 hover:bg-bronze-700 text-white font-semibold text-sm transition-all">
+                        Load Into Quote Calculator &rarr;
                     </button>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="toastConfirmation" class="fixed inset-0 z-50 bg-charcoal-950/80 backdrop-blur-sm flex items-center justify-center p-4 hidden">
-        <div class="glass-panel max-w-md w-full rounded-2xl p-6 border-2 border-gold-500/50 text-center space-y-4 shadow-2xl">
-            <div class="w-16 h-16 rounded-full bg-gold-500/20 text-gold-400 flex items-center justify-center text-3xl mx-auto border border-gold-500">
-                <i class="fa-solid fa-circle-check"></i>
+    <!-- Quote Confirmation Modal -->
+    <div id="toastConfirmation" class="fixed inset-0 z-50 bg-stone-950/70 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-white max-w-md w-full rounded-2xl p-7 border border-stone-200 text-center space-y-4 shadow-2xl">
+            <div class="w-14 h-14 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center text-2xl mx-auto border border-emerald-200">
+                <i class="fa-solid fa-check"></i>
             </div>
-            <h3 class="text-2xl font-serif font-bold text-white">Quote Request Received!</h3>
-            <p class="text-xs text-slate-300 leading-relaxed">
-                Thank you for submitting your estimate to Top Shop Gulfport. A fabrication specialist will contact you within 2 business hours to review your layout and confirm your free in-home measurement.
+            <h3 class="text-2xl font-serif font-bold text-stone-900">Estimate Request Sent</h3>
+            <p class="text-sm text-stone-600 leading-relaxed">
+                Thank you for contacting Top Shop Gulfport. A stone specialist will reach out shortly to confirm slab availability and schedule your free in-home laser measurement.
             </p>
-            <div class="bg-charcoal-950 p-3 rounded-xl border border-slate-800 text-left text-xs font-mono space-y-1">
-                <div class="text-gold-400 font-bold">Reference Summary:</div>
-                <div id="toastSummaryText" class="text-slate-300">Total: $3,150 (Quartz | 45 SQ FT)</div>
+            <div class="bg-stone-50 p-3.5 rounded-xl border border-stone-200 text-left text-xs space-y-1">
+                <div class="text-stone-500 font-semibold uppercase tracking-wider text-[10px]">Configuration Summary</div>
+                <div id="toastSummaryText" class="text-stone-900 font-bold text-sm">Total: $3,150 (Quartz | 45 SQ FT)</div>
             </div>
-            <button onclick="closeToast()" class="w-full py-3 rounded-xl bg-slatecustom hover:bg-slate-700 text-white font-bold text-sm">
-                Close Window
+            <button onclick="closeToast()" class="w-full py-3 rounded-xl bg-stone-900 hover:bg-stone-800 text-white font-semibold text-sm transition-colors">
+                Done
             </button>
         </div>
     </div>
@@ -698,64 +740,62 @@
            Data Stores & Configuration
         ------------------------------------------------------------- */
         const materialsData = [
-            { id: 'quartz', name: 'Quartz', category: 'Manmade', pricePerSqFt: 65, icon: 'fa-gem', desc: 'Engineered non-porous stain resistance' },
-            { id: 'granite', name: 'Granite', category: 'Natural Stone', pricePerSqFt: 55, icon: 'fa-mountain', desc: 'Classic natural heat-resistant beauty' },
-            { id: 'quartzite', name: 'Quartzite', category: 'Natural Stone', pricePerSqFt: 85, icon: 'fa-cubes', desc: 'Exotic marble aesthetics with high durability' },
-            { id: 'dolomite', name: 'Dolomite', category: 'Natural Stone', pricePerSqFt: 70, icon: 'fa-layer-group', desc: 'Harder than marble with rich subtle veining' },
-            { id: 'solidsurface', name: 'Solid Surface', category: 'Manmade', pricePerSqFt: 45, icon: 'fa-border-all', desc: 'Seamless design and easily repairable' }
+            { id: 'quartz', name: 'Quartz', category: 'Engineered Stone', pricePerSqFt: 65, icon: 'fa-gem' },
+            { id: 'granite', name: 'Granite', category: 'Natural Stone', pricePerSqFt: 55, icon: 'fa-mountain' },
+            { id: 'quartzite', name: 'Quartzite', category: 'Natural Stone', pricePerSqFt: 85, icon: 'fa-cubes' },
+            { id: 'dolomite', name: 'Dolomite', category: 'Natural Stone', pricePerSqFt: 70, icon: 'fa-layer-group' },
+            { id: 'solidsurface', name: 'Solid Surface', category: 'Seamless Acrylic', pricePerSqFt: 45, icon: 'fa-border-all' }
         ];
 
         const layoutTypes = [
-            { id: 'straight', name: 'Straight Run', multiplier: 1.0, icon: 'fa-ruler-horizontal' },
+            { id: 'straight', name: 'Straight', multiplier: 1.0, icon: 'fa-ruler-horizontal' },
             { id: 'lshape', name: 'L-Shape', multiplier: 1.0, icon: 'fa-turn-down' },
             { id: 'galley', name: 'Galley', multiplier: 1.0, icon: 'fa-align-justify' },
             { id: 'ushape', name: 'U-Shape', multiplier: 1.0, icon: 'fa-arrows-split-up-and-left' },
-            { id: 'island', name: 'Island + Tops', multiplier: 1.05, icon: 'fa-square' }
+            { id: 'island', name: 'With Island', multiplier: 1.05, icon: 'fa-square' }
         ];
 
         const edgeProfiles = [
             { id: 'eased', name: 'Eased / Square', extraCost: 0, desc: 'Clean modern standard finish' },
-            { id: 'bevel', name: 'Bevel Edge', extraCost: 12, desc: 'Sleek angled top edge' },
-            { id: 'bullnose', name: 'Full Bullnose', extraCost: 15, desc: 'Fully rounded smooth contour' },
-            { id: 'ogee', name: 'Ogee Classic', extraCost: 25, desc: 'Luxury S-shape traditional profile' },
-            { id: 'waterfall', name: 'Waterfall Edge', extraCost: 45, desc: 'Stone extends vertically to floor' }
+            { id: 'bevel', name: 'Bevel Edge', extraCost: 12, desc: 'Crisp angled top chamfer' },
+            { id: 'bullnose', name: 'Full Bullnose', extraCost: 15, desc: 'Fully rounded smooth profile' },
+            { id: 'ogee', name: 'Ogee Classic', extraCost: 25, desc: 'Traditional sculpted S-curve' },
+            { id: 'waterfall', name: 'Waterfall Edge', extraCost: 45, desc: 'Mitered stone drop to floor' }
         ];
 
         const addonItems = [
             { id: 'sinkCutout', name: 'Undermount Sink Cutout', cost: 150, checked: true },
-            { id: 'backsplash', name: '4" Matching Backsplash', cost: 75, checked: borderCheckedDefault() },
+            { id: 'backsplash', name: '4" Matching Backsplash', cost: 75, checked: true },
             { id: 'oldRemoval', name: 'Old Countertop Removal', cost: 200, checked: false },
             { id: 'cooktopCut', name: 'Cooktop Cutout', cost: 100, checked: false }
         ];
-
-        function borderCheckedDefault() { return true; }
 
         const slabPortfolio = [
             {
                 id: 's1',
                 title: 'Calacatta Luxe Quartz',
                 category: 'Quartz',
-                price: '$65/sq ft',
+                price: '$65 / sq ft',
                 durability: '5/5 Non-Porous',
                 maintenance: 'Zero Sealing Required',
                 img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80',
-                desc: 'Crisp white base with bold grey and subtle gold feathering seams.'
+                desc: 'Crisp warm-white base with bold grey and subtle gold feathering seams.'
             },
             {
                 id: 's2',
                 title: 'Black Forest Granite',
                 category: 'Granite',
-                price: '$55/sq ft',
+                price: '$55 / sq ft',
                 durability: '5/5 Extreme Heat',
                 maintenance: 'Annual Sealer',
                 img: 'https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80',
-                desc: 'Deep obsidian black background laced with swirling ivory quartz movement.'
+                desc: 'Deep obsidian black background laced with sweeping ivory quartz movement.'
             },
             {
                 id: 's3',
                 title: 'Taj Mahal Quartzite',
                 category: 'Quartzite',
-                price: '$85/sq ft',
+                price: '$85 / sq ft',
                 durability: '5/5 Harder than Granite',
                 maintenance: 'Low Sealing',
                 img: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=800&q=80',
@@ -765,44 +805,44 @@
                 id: 's4',
                 title: 'Super White Dolomite',
                 category: 'Dolomite',
-                price: '$70/sq ft',
+                price: '$70 / sq ft',
                 durability: '4/5 High Density',
                 maintenance: 'Periodic Sealing',
                 img: 'https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=800&q=80',
-                desc: 'Looks like luxury marble with significantly higher density and scratch resistance.'
+                desc: 'Classic marble aesthetic with higher structural density and scratch resistance.'
             },
             {
                 id: 's5',
                 title: 'Carrara Pure White Quartz',
                 category: 'Quartz',
-                price: '$65/sq ft',
+                price: '$65 / sq ft',
                 durability: '5/5 Non-Porous',
                 maintenance: 'Zero Maintenance',
                 img: 'https://images.unsplash.com/photo-1590381105924-c72589b9ef3f?auto=format&fit=crop&w=800&q=80',
-                desc: 'Timeless Italian marble styling engineered for high-traffic kitchens.'
+                desc: 'Timeless Italian marble styling engineered for busy family kitchens.'
             },
             {
                 id: 's6',
                 title: 'Arctic Solid Surface',
                 category: 'Solid Surface',
-                price: '$45/sq ft',
+                price: '$45 / sq ft',
                 durability: '4/5 Seamless',
-                maintenance: 'Easy Renewable Finish',
+                maintenance: 'Renewable Matte Finish',
                 img: 'https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?auto=format&fit=crop&w=800&q=80',
-                desc: 'Ultra smooth, perfectly seamless finish ideal for commercial or contemporary home tops.'
+                desc: 'Ultra-smooth, inconspicuous seams ideal for contemporary residential or commercial spaces.'
             }
         ];
 
         const comparisonMatrix = [
-            { category: 'Quartz', heat: 'Moderate (Up to 300°F)', scratch: 'High', stain: 'Excellent (Non-porous)', main: 'Very Low (No Sealing)', price: '$$$ ($60-$80)' },
-            { category: 'Granite', heat: 'Excellent (Direct Pans)', scratch: 'Very High', stain: 'High (When Sealed)', main: 'Low (Annual Seal)', price: '$$ ($45-$70)' },
-            { category: 'Quartzite', heat: 'Extreme', scratch: 'Maximum', stain: 'High', main: 'Moderate', price: '$$$$ ($80-$120)' },
-            { category: 'Dolomite', heat: 'High', scratch: 'High', stain: 'Moderate', main: 'Moderate Sealing', price: '$$$ ($65-$90)' },
-            { category: 'Solid Surface', heat: 'Low (Use Trivets)', scratch: 'Moderate (Sands out)', stain: 'Excellent', main: 'Very Low', price: '$ ($40-$55)' }
+            { category: 'Quartz', heat: 'Moderate (Up to 300°F)', scratch: 'High', stain: 'Excellent (Non-porous)', main: 'Very Low (No Sealing)', price: '$60 – $80 / sq ft' },
+            { category: 'Granite', heat: 'Excellent (Direct Pans)', scratch: 'Very High', stain: 'High (When Sealed)', main: 'Low (Annual Seal)', price: '$45 – $70 / sq ft' },
+            { category: 'Quartzite', heat: 'Extreme', scratch: 'Maximum', stain: 'High', main: 'Moderate (Annual Seal)', price: '$80 – $120 / sq ft' },
+            { category: 'Dolomite', heat: 'High', scratch: 'High', stain: 'Moderate', main: 'Moderate Sealing', price: '$65 – $90 / sq ft' },
+            { category: 'Solid Surface', heat: 'Low (Use Trivets)', scratch: 'Moderate (Sands Out)', stain: 'Excellent', main: 'Very Low', price: '$40 – $55 / sq ft' }
         ];
 
         /* -------------------------------------------------------------
-           State Variables
+           State & Initialization
         ------------------------------------------------------------- */
         let state = {
             selectedMaterial: 'quartz',
@@ -813,9 +853,6 @@
             activeFilter: 'All'
         };
 
-        /* -------------------------------------------------------------
-           Initialization & DOM Handlers
-        ------------------------------------------------------------- */
         window.addEventListener('DOMContentLoaded', () => {
             renderMaterialOptions();
             renderLayoutOptions();
@@ -828,7 +865,6 @@
         });
 
         function setupEventListeners() {
-            // Sqft Slider and Input sync
             const range = document.getElementById('sqftRange');
             const input = document.getElementById('sqftInput');
 
@@ -849,65 +885,72 @@
         }
 
         /* -------------------------------------------------------------
-           Render Calculation Component Options
+           Render Functions
         ------------------------------------------------------------- */
         function renderMaterialOptions() {
             const container = document.getElementById('materialOptions');
-            container.innerHTML = materialsData.map(m => `
-                <div onclick="selectMaterial('${m.id}')" 
-                     class="p-3.5 rounded-xl border cursor-pointer transition-all ${state.selectedMaterial === m.id ? 'bg-gold-500/10 border-gold-500 shadow-md shadow-gold-500/10' : 'glass-card border-slate-700/70 hover:border-slate-500'}">
-                    <div class="flex items-center justify-between mb-1">
-                        <i class="fa-solid ${m.icon} ${state.selectedMaterial === m.id ? 'text-gold-400' : 'text-slate-400'} text-sm"></i>
-                        <span class="text-[11px] font-mono text-slate-400">$${m.pricePerSqFt}/sqft</span>
+            container.innerHTML = materialsData.map(m => {
+                const active = state.selectedMaterial === m.id;
+                return `
+                <button type="button" onclick="selectMaterial('${m.id}')" 
+                     class="text-left p-4 rounded-xl border transition-all ${active ? 'bg-bronze-50 border-bronze-600 ring-1 ring-bronze-600' : 'bg-stone-50/70 border-stone-200 hover:border-stone-400 hover:bg-white'}">
+                    <div class="flex items-center justify-between mb-2">
+                        <i class="fa-solid ${m.icon} ${active ? 'text-bronze-600' : 'text-stone-500'} text-sm"></i>
+                        <span class="text-xs font-bold ${active ? 'text-bronze-700' : 'text-stone-600'}">$${m.pricePerSqFt}/sf</span>
                     </div>
-                    <h4 class="text-xs font-bold text-white">${m.name}</h4>
-                    <p class="text-[10px] text-slate-400 leading-tight mt-0.5">${m.category}</p>
-                </div>
-            `).join('');
+                    <div class="text-sm font-bold text-stone-900">${m.name}</div>
+                    <div class="text-[11px] text-stone-500 mt-0.5">${m.category}</div>
+                </button>
+            `}).join('');
         }
 
         function renderLayoutOptions() {
             const container = document.getElementById('layoutOptions');
-            container.innerHTML = layoutTypes.map(l => `
-                <div onclick="selectLayout('${l.id}')" 
-                     class="p-2.5 rounded-xl border text-center cursor-pointer transition-all ${state.selectedLayout === l.id ? 'bg-gold-500/10 border-gold-500 text-gold-400' : 'glass-card border-slate-800 text-slate-400 hover:border-slate-600'}">
-                    <i class="fa-solid ${l.icon} text-base mb-1 block"></i>
-                    <span class="text-[11px] font-medium block leading-tight">${l.name}</span>
-                </div>
-            `).join('');
+            container.innerHTML = layoutTypes.map(l => {
+                const active = state.selectedLayout === l.id;
+                return `
+                <button type="button" onclick="selectLayout('${l.id}')" 
+                     class="p-3 rounded-xl border text-center transition-all ${active ? 'bg-bronze-50 border-bronze-600 text-bronze-700 ring-1 ring-bronze-600' : 'bg-stone-50/70 border-stone-200 text-stone-600 hover:border-stone-400 hover:bg-white'}">
+                    <i class="fa-solid ${l.icon} text-sm mb-1.5 block"></i>
+                    <span class="text-xs font-semibold block">${l.name}</span>
+                </button>
+            `}).join('');
         }
 
         function renderEdgeOptions() {
             const container = document.getElementById('edgeOptions');
-            container.innerHTML = edgeProfiles.map(e => `
-                <div onclick="selectEdge('${e.id}')" 
-                     class="p-3 rounded-xl border cursor-pointer transition-all ${state.selectedEdge === e.id ? 'bg-gold-500/10 border-gold-500' : 'glass-card border-slate-800 hover:border-slate-600'}">
+            container.innerHTML = edgeProfiles.map(e => {
+                const active = state.selectedEdge === e.id;
+                return `
+                <button type="button" onclick="selectEdge('${e.id}')" 
+                     class="text-left p-3.5 rounded-xl border transition-all ${active ? 'bg-bronze-50 border-bronze-600 ring-1 ring-bronze-600' : 'bg-stone-50/70 border-stone-200 hover:border-stone-400 hover:bg-white'}">
                     <div class="flex justify-between items-center mb-1">
-                        <span class="text-xs font-bold text-white">${e.name}</span>
-                        <span class="text-[10px] font-mono ${e.extraCost > 0 ? 'text-gold-400' : 'text-slate-500'}">
+                        <span class="text-xs font-bold text-stone-900">${e.name}</span>
+                        <span class="text-[11px] font-semibold ${e.extraCost > 0 ? 'text-bronze-600' : 'text-stone-500'}">
                             ${e.extraCost > 0 ? `+$${e.extraCost}/ft` : 'Included'}
                         </span>
                     </div>
-                    <p class="text-[10px] text-slate-400 leading-tight">${e.desc}</p>
-                </div>
-            `).join('');
+                    <p class="text-[11px] text-stone-500 leading-snug">${e.desc}</p>
+                </button>
+            `}).join('');
         }
 
         function renderAddonOptions() {
             const container = document.getElementById('addonOptions');
             container.innerHTML = addonItems.map(a => `
-                <label class="flex items-center justify-between p-3 rounded-xl glass-card border border-slate-800 cursor-pointer hover:border-slate-600">
-                    <div class="flex items-center gap-2.5">
-                        <input type="checkbox" onchange="toggleAddon('${a.id}', this.checked)" ${state.addons[a.id] ? 'checked' : ''} class="w-4 h-4 rounded accent-gold-500">
-                        <span class="text-xs text-slate-200 font-medium">${a.name}</span>
+                <label class="flex items-center justify-between p-3.5 rounded-xl bg-stone-50/70 border border-stone-200 cursor-pointer hover:border-stone-400 hover:bg-white transition-colors">
+                    <div class="flex items-center gap-3">
+                        <input type="checkbox" onchange="toggleAddon('${a.id}', this.checked)" ${state.addons[a.id] ? 'checked' : ''} 
+                               class="w-4 h-4 rounded border-stone-300 text-bronze-600 focus:ring-bronze-600 accent-[#8C4F1E]">
+                        <span class="text-xs sm:text-sm text-stone-800 font-medium">${a.name}</span>
                     </div>
-                    <span class="text-xs font-mono text-gold-400">+$${a.cost}</span>
+                    <span class="text-xs font-bold text-stone-700">+$${a.cost}</span>
                 </label>
             `).join('');
         }
 
         /* -------------------------------------------------------------
-           State Updaters & Dynamic Cost Calculator
+           State Updaters & Calculator Logic
         ------------------------------------------------------------- */
         function selectMaterial(id) {
             state.selectedMaterial = id;
@@ -939,48 +982,40 @@
             const edge = edgeProfiles.find(e => e.id === state.selectedEdge);
             const layout = layoutTypes.find(l => l.id === state.selectedLayout);
 
-            // Base Stone + Fabrication Cost
             const stoneCost = state.sqft * mat.pricePerSqFt * layout.multiplier;
-
-            // Linear feet for edge estimate (approx 60% of sqft area linear edge)
             const approxLinearFeet = Math.round(state.sqft * 0.6);
             const edgeCost = approxLinearFeet * edge.extraCost;
 
-            // Addons
             let addonsCost = 0;
             addonItems.forEach(item => {
-                if (state.addons[item.id]) {
-                    addonsCost += item.cost;
-                }
+                if (state.addons[item.id]) addonsCost += item.cost;
             });
 
             const total = Math.round(stoneCost + edgeCost + addonsCost);
 
-            // Update UI
             document.getElementById('sqftDisplay').innerText = state.sqft;
             document.getElementById('totalCostDisplay').innerText = `$${total.toLocaleString()}`;
-            
             document.getElementById('summaryMaterialName').innerText = `${mat.name} Stone (${state.sqft} sq ft)`;
             document.getElementById('summaryMaterialCost').innerText = `$${Math.round(stoneCost).toLocaleString()}`;
-            
             document.getElementById('summaryEdgeName').innerText = `${edge.name} Profile`;
             document.getElementById('summaryEdgeCost').innerText = edgeCost > 0 ? `+$${edgeCost}` : 'Included';
-            
             document.getElementById('summaryAddonsCost').innerText = `$${addonsCost}`;
         }
 
         /* -------------------------------------------------------------
-           Slab Portfolio Gallery & Filters
+           Slab Portfolio & Comparison Matrix
         ------------------------------------------------------------- */
         function renderSlabPortfolio() {
             const filters = ['All', 'Quartz', 'Granite', 'Quartzite', 'Dolomite'];
             const filterContainer = document.getElementById('portfolioFilterContainer');
-            filterContainer.innerHTML = filters.map(f => `
+            filterContainer.innerHTML = filters.map(f => {
+                const active = state.activeFilter === f;
+                return `
                 <button onclick="filterPortfolio('${f}')" 
-                        class="px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${state.activeFilter === f ? 'bg-gold-500 text-charcoal-950 shadow-md' : 'glass-card text-slate-300 hover:bg-slate-700'}">
+                        class="px-4 py-2 rounded-lg text-xs font-semibold transition-all ${active ? 'bg-stone-900 text-white shadow-sm' : 'bg-white text-stone-700 border border-stone-200 hover:border-stone-400'}">
                     ${f}
                 </button>
-            `).join('');
+            `}).join('');
 
             const grid = document.getElementById('slabGrid');
             const filteredSlabs = state.activeFilter === 'All' 
@@ -988,34 +1023,30 @@
                 : slabPortfolio.filter(s => s.category.toLowerCase() === state.activeFilter.toLowerCase());
 
             grid.innerHTML = filteredSlabs.map(s => `
-                <div class="glass-panel rounded-2xl overflow-hidden border border-slate-800 hover:border-gold-500/40 transition-all group flex flex-col justify-between">
+                <div class="bg-white rounded-2xl overflow-hidden border border-stone-200 hover:border-stone-400 hover:shadow-md transition-all group flex flex-col justify-between">
                     <div>
-                        <div class="relative h-48 overflow-hidden">
+                        <div class="relative h-56 overflow-hidden bg-stone-100">
                             <img src="${s.img}" alt="${s.title}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                            <span class="absolute top-3 left-3 bg-charcoal-950/80 backdrop-blur-md text-gold-400 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase border border-gold-500/20">
+                            <span class="absolute top-3.5 left-3.5 bg-white/95 backdrop-blur-sm text-stone-900 text-[11px] font-bold px-3 py-1 rounded-md uppercase tracking-wider shadow-sm">
                                 ${s.category}
                             </span>
                         </div>
-                        <div class="p-5">
-                            <h3 class="text-lg font-bold text-white font-serif mb-1">${s.title}</h3>
-                            <p class="text-xs text-slate-400 line-clamp-2 leading-relaxed mb-4">${s.desc}</p>
+                        <div class="p-6">
+                            <div class="flex items-baseline justify-between gap-2 mb-1.5">
+                                <h3 class="text-xl font-serif font-bold text-stone-900">${s.title}</h3>
+                                <span class="text-xs font-bold text-bronze-600 shrink-0">${s.price}</span>
+                            </div>
+                            <p class="text-xs text-stone-600 leading-relaxed mb-4">${s.desc}</p>
                             
-                            <div class="grid grid-cols-2 gap-2 text-[11px] bg-charcoal-950/60 p-2.5 rounded-lg border border-slate-800/80 mb-4">
-                                <div>
-                                    <span class="text-slate-500 block">Durability</span>
-                                    <span class="text-slate-200 font-semibold">${s.durability}</span>
-                                </div>
-                                <div>
-                                    <span class="text-slate-500 block">Est. Cost</span>
-                                    <span class="text-gold-400 font-semibold">${s.price}</span>
-                                </div>
+                            <div class="pt-3.5 border-t border-stone-100 flex items-center justify-between text-xs">
+                                <span class="text-stone-500">Durability: <strong class="text-stone-800">${s.durability}</strong></span>
                             </div>
                         </div>
                     </div>
 
-                    <div class="px-5 pb-5 pt-0">
-                        <button onclick="openSlabModal('${s.id}')" class="w-full py-2.5 rounded-xl bg-slatecustom hover:bg-slate-700 text-white font-semibold text-xs border border-slate-600 transition-all flex items-center justify-center gap-2">
-                            <i class="fa-solid fa-expand"></i> View Slab Details
+                    <div class="px-6 pb-6">
+                        <button onclick="openSlabModal('${s.id}')" class="w-full py-2.5 rounded-xl bg-stone-50 hover:bg-stone-900 text-stone-900 hover:text-white font-semibold text-xs border border-stone-200 hover:border-stone-900 transition-colors">
+                            Inspect Slab & Price
                         </button>
                     </div>
                 </div>
@@ -1027,8 +1058,22 @@
             renderSlabPortfolio();
         }
 
+        function renderComparisonMatrix() {
+            const tbody = document.getElementById('comparisonTableBody');
+            tbody.innerHTML = comparisonMatrix.map(c => `
+                <tr class="hover:bg-stone-50 transition-colors">
+                    <td class="py-4 px-6 font-bold text-stone-900">${c.category}</td>
+                    <td class="py-4 px-6">${c.heat}</td>
+                    <td class="py-4 px-6">${c.scratch}</td>
+                    <td class="py-4 px-6">${c.stain}</td>
+                    <td class="py-4 px-6">${c.main}</td>
+                    <td class="py-4 px-6 font-bold text-bronze-600">${c.price}</td>
+                </tr>
+            `).join('');
+        }
+
         /* -------------------------------------------------------------
-           Modal Handlers
+           Modals
         ------------------------------------------------------------- */
         function openSlabModal(slabId) {
             const slab = slabPortfolio.find(s => s.id === slabId);
@@ -1042,12 +1087,9 @@
             document.getElementById('modalSlabPrice').innerText = slab.price;
             document.getElementById('modalSlabMaintenance').innerText = slab.maintenance;
 
-            const selectBtn = document.getElementById('modalSelectBtn');
-            selectBtn.onclick = () => {
+            document.getElementById('modalSelectBtn').onclick = () => {
                 const targetMat = materialsData.find(m => m.name.toLowerCase() === slab.category.toLowerCase());
-                if (targetMat) {
-                    selectMaterial(targetMat.id);
-                }
+                if (targetMat) selectMaterial(targetMat.id);
                 closeSlabModal();
                 document.getElementById('estimator').scrollIntoView({ behavior: 'smooth' });
             };
@@ -1059,35 +1101,11 @@
             document.getElementById('slabModal').classList.add('hidden');
         }
 
-        /* -------------------------------------------------------------
-           Comparison Matrix Generator
-        ------------------------------------------------------------- */
-        function renderComparisonMatrix() {
-            const tbody = document.getElementById('comparisonTableBody');
-            tbody.innerHTML = comparisonMatrix.map(c => `
-                <tr class="hover:bg-slate-800/40 transition-colors">
-                    <td class="p-4 sm:p-5 font-bold text-white flex items-center gap-2">
-                        <i class="fa-solid fa-square-small text-gold-400 text-[8px]"></i>
-                        ${c.category}
-                    </td>
-                    <td class="p-4 sm:p-5 text-xs">${c.heat}</td>
-                    <td class="p-4 sm:p-5 text-xs">${c.scratch}</td>
-                    <td class="p-4 sm:p-5 text-xs">${c.stain}</td>
-                    <td class="p-4 sm:p-5 text-xs">${c.main}</td>
-                    <td class="p-4 sm:p-5 font-semibold text-gold-400 text-xs">${c.price}</td>
-                </tr>
-            `).join('');
-        }
-
-        /* -------------------------------------------------------------
-           Form Submission & Toast Logic
-        ------------------------------------------------------------- */
         function handleQuoteSubmit(e) {
             e.preventDefault();
             const total = document.getElementById('totalCostDisplay').innerText;
             const mat = materialsData.find(m => m.id === state.selectedMaterial);
-
-            document.getElementById('toastSummaryText').innerText = `Estimated Total: ${total} (${mat.name} | ${state.sqft} SQ FT)`;
+            document.getElementById('toastSummaryText').innerText = `${total} — ${mat.name} (${state.sqft} SQ FT)`;
             document.getElementById('toastConfirmation').classList.remove('hidden');
         }
 
